@@ -1,0 +1,48 @@
+[package]
+name = "racing_simulator"
+version = "0.1.0"
+edition = "2021"
+authors = ["Racing Team"]
+
+[dependencies]
+# ECS
+hecs = "0.10.5"
+
+# Физика
+rapier3d = { version = "0.17.2", features = ["simd-stable"] }
+
+# Графика
+wgpu = "25.0.0"
+bytemuck = { version = "1.14", features = ["derive"] }
+pollster = "0.3.0"
+
+# Окно
+winit = "0.29.10"
+raw-window-handle = "0.5.0"
+
+# Математика
+glam = "0.24.2"
+
+# Аудио
+rodio = "0.17.1" 
+
+# Ввод
+gilrs = "0.10.2"
+winit_input_helper = "0.15.0"
+
+# Утилиты
+log = "0.4.20"
+env_logger = "0.10.1"
+anyhow = "1.0.76"
+
+# Сериализация
+serde = { version = "1.0.193", features = ["derive"] }
+serde_json = "1.0.108"
+
+# Дополнительно
+uuid = { version = "1.6.1", features = ["v4"] }
+
+[features]
+default = []
+debug-physics = []
+debug-renderer = []
